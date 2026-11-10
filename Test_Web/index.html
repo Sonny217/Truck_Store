@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encuentra camiones nuevos y usados. Calidad, confianza y excelentes precios.">
+
+  <title>TRUCKS — Concesionario de Camiones</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="logo">
+      <span class="logo-icon">T</span>
+      TRUCKS<span class="logo-dot">.</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Camiones</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="cart-btn" id="cartButton">
+        ♡ <span id="cartCount">0</span>
+      </button>
+
+      <a href="#contacto" class="btn btn-light header-cta">
+        Contáctanos
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <span class="eyebrow">POTENCIA • CONFIANZA • EXPERIENCIA</span>
+
+        <h1>
+          Encuentra el camión
+          <span>que mueve tu negocio.</span>
+        </h1>
+
+        <p>
+          Descubre nuestra selección de camiones de alto rendimiento,
+          diseñados para llevar tus proyectos más lejos.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#catalogo" class="btn btn-light">
+            Explorar catálogo →
+          </a>
+
+          <a href="#nosotros" class="btn btn-outline">
+            Conócenos
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <strong>150+</strong>
+            <span>Camiones vendidos</span>
+          </div>
+          <div>
+            <strong>10+</strong>
+            <span>Años de experiencia</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>Compromiso</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="features">
+      <div class="feature">
+        <span>01</span>
+        <div>
+          <h3>Calidad garantizada</h3>
+          <p>Vehículos seleccionados cuidadosamente.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <span>02</span>
+        <div>
+          <h3>Precios competitivos</h3>
+          <p>Opciones para diferentes presupuestos.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <span>03</span>
+        <div>
+          <h3>Asesoría personalizada</h3>
+          <p>Te ayudamos a elegir el ideal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section class="catalog section" id="catalogo">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow dark-eyebrow">NUESTRO INVENTARIO</span>
+          <h2>Encuentra tu próximo camión<span>.</span></h2>
+          <p>Vehículos preparados para superar cualquier desafío.</p>
+        </div>
+
+        <span class="inventory-count" id="inventoryCount">
+          6 vehículos
+        </span>
+      </div>
+
+      <div class="catalog-controls">
+
+        <div class="search-box">
+          <span>⌕</span>
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Buscar por marca o modelo..."
+          >
+        </div>
+
+        <select id="categoryFilter" aria-label="Filtrar por categoría">
+          <option value="all">Todas las categorías</option>
+          <option value="carga">Carga pesada</option>
+          <option value="volteo">Volteo</option>
+          <option value="tractocamion">Tractocamiones</option>
+        </select>
+
+        <select id="sortFilter" aria-label="Ordenar vehículos">
+          <option value="default">Ordenar por</option>
+          <option value="low">Menor precio</option>
+          <option value="high">Mayor precio</option>
+          <option value="new">Más nuevos</option>
+        </select>
+
+      </div>
+
+      <div class="truck-grid" id="truckGrid"></div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <h3>No encontramos vehículos</h3>
+        <p>Prueba con otra búsqueda o categoría.</p>
+      </div>
+
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="about section" id="nosotros">
+      <div class="about-image">
+        <img
+          src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1000"
+          alt="Camión de transporte en carretera"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="about-content">
+        <span class="eyebrow">QUIÉNES SOMOS</span>
+        <h2>Más que camiones, impulsamos negocios.</h2>
+
+        <p>
+          Somos un concesionario comprometido con ofrecer vehículos
+          comerciales de calidad y soluciones de transporte
+          para empresas y profesionales.
+        </p>
+
+        <p>
+          Nuestro objetivo es ayudarte a encontrar el vehículo
+          adecuado para que tu negocio siga avanzando.
+        </p>
+
+        <a href="#contacto" class="btn btn-light">
+          Habla con un asesor →
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact section" id="contacto">
+      <div>
+        <span class="eyebrow">ESTAMOS PARA AYUDARTE</span>
+        <h2>¿Listo para llevar tu negocio más lejos?</h2>
+        <p>Contáctanos y recibe asesoría para encontrar tu próximo camión.</p>
+      </div>
+
+      <a href="https://wa.me/18090000000"
+         class="btn btn-light"
+         target="_blank"
+         rel="noopener noreferrer">
+        Contactar por WhatsApp →
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <a href="#" class="logo">TRUCKS<span class="logo-dot">.</span></a>
+    <p>© 2026 TRUCKS. Todos los derechos reservados.</p>
+    <a href="#inicio">Volver arriba ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
